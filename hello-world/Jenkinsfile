@@ -1,9 +1,12 @@
 pipeline {
     agent any 
+    options {
+        timeout(time: 5)
+    }
     stages {
-        stage('Static Analysis') {
+        stage('Build 1') {
             steps {
-                echo 'Run the static analysis to the code' 
+                echo 'Hello. This is Alastin' 
             }
         }
         stage('Compile') {
